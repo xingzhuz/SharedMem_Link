@@ -40,11 +40,11 @@ all: $(WRITER_TARGET) $(READER_TARGET)
 
 # 规则：生成写进程可执行文件
 $(WRITER_TARGET): $(WRITER_OBJS) $(COMMON_OBJS) | $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $@ $^ -lssl -lcrypto -lcjson -lmysqlclient
+	$(CC) $(CFLAGS) -o $@ $^ -lssl -lcrypto -lcjson
 
 # 规则：生成读进程可执行文件
 $(READER_TARGET): $(READER_OBJS) $(COMMON_OBJS) | $(BIN_DIR)
-	$(CC) $(CFLAGS) -o $@ $^ -lssl -lcrypto -lcjson -lmysqlclient
+	$(CC) $(CFLAGS) -o $@ $^ -lssl -lcrypto -lcjson
 
 # 规则：编译 writer/ 目录下的 .c 文件生成 .o 文件
 $(OBJ_DIR)/%.o: $(WRITER_DIR)/%.c | $(OBJ_DIR)
