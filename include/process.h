@@ -5,13 +5,11 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/stat.h>
-#include <openssl/md5.h>
-#include <openssl/evp.h>
 #include <iconv.h>
 #include <errno.h>
 #include <cjson/cJSON.h>
 
-#define BLOCK_SIZE 4096         // 每次传输 10B
+#define BLOCK_SIZE 4096         // 每次传输 4K
 #define BUFFER_SIZE (1024 * 32) // 代码中各种字符数组的缓冲区大小
 
 // 共有的部分 -------------------------------
