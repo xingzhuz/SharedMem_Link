@@ -46,7 +46,20 @@ netSocket/
 - 进行了数据完整性检验，使用若校验 (校验和) 方式校验
 - 能传输各种文件，如 `txt`、`mp3`、`png`等格式文件，并且传输速率较快
 
+## 环境配置
 
+
+- `csjon`配置（没有`git`就去安装一个）
+
+```shell
+git clone https://github.com/DaveGamble/cJSON.git
+cd cJSON/
+mkdir build
+cd build/
+cmake ..
+make
+make install
+```
 
 ## 编译运行
 
@@ -61,7 +74,6 @@ make
 # 删除所有可执行文件
 make clean
 ```
-
 
 
 ## 开发日志
